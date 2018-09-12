@@ -6,4 +6,8 @@
     <select id="findUserById" parameterType="int" resultType="com.example.model.User">
 		SELECT * FROM user where id=#{id}
 	</select>
+
+	<select id="findUserLogin">
+		select * from `user` where user_name=#{name} and pwd=#{pwd}
+	</select>
 </mapper>
